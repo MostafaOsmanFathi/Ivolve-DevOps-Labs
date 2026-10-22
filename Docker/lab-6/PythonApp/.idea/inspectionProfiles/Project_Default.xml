@@ -1,0 +1,26 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="Eslint" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="hdbscan" />
+          <option value="matplotlib" />
+          <option value="numpy" />
+          <option value="open3d" />
+          <option value="pandas" />
+          <option value="scipy" />
+          <option value="trimesh" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="cmdfixer.llm.gemini_preview_llm.*" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
