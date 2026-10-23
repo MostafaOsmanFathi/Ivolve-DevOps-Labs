@@ -22,7 +22,7 @@ The services communicate with each other over HTTP. The application does not use
 │   ├── app.py
 │   ├── requirements.txt
 │   └── Dockerfile
- ── notification/
+└── notification/
     ├── app.py
     ├── requirements.txt
     └── Dockerfile
