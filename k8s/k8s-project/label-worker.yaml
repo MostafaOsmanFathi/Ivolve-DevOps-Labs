@@ -1,0 +1,124 @@
+apiVersion: v1
+kind: Node
+metadata:
+  annotations:
+    node.alpha.kubernetes.io/ttl: "0"
+    projectcalico.org/IPv4Address: 192.168.122.127/24
+    projectcalico.org/IPv4IPIPTunnelAddr: 10.244.254.128
+    volumes.kubernetes.io/controller-managed-attach-detach: "true"
+  creationTimestamp: "2026-10-26T10:35:35Z"
+  labels:
+    beta.kubernetes.io/arch: amd64
+    beta.kubernetes.io/os: linux
+    kubernetes.io/arch: amd64
+    kubernetes.io/hostname: k8s-worker
+    kubernetes.io/os: linux
+    project: ivolve
+  name: k8s-worker
+  resourceVersion: "7444"
+  uid: 18a939ad-4df1-4316-8827-b8f9ba50e4e0
+spec:
+  podCIDR: 10.244.1.0/24
+  podCIDRs:
+  - 10.244.1.0/24
+  taints:
+  - effect: NoSchedule
+    key: workload
+    value: ivolveApp
+status:
+  addresses:
+  - address: 192.168.122.127
+    type: InternalIP
+  - address: k8s-worker
+    type: Hostname
+  allocatable:
+    cpu: "4"
+    ephemeral-storage: "55826469182"
+    hugepages-1Gi: "0"
+    hugepages-2Mi: "0"
+    memory: 3377164Ki
+    pods: "110"
+  capacity:
+    cpu: "4"
+    ephemeral-storage: 60575596Ki
+    hugepages-1Gi: "0"
+    hugepages-2Mi: "0"
+    memory: 3479564Ki
+    pods: "110"
+  conditions:
+  - lastHeartbeatTime: "2026-10-26T17:39:32Z"
+    lastTransitionTime: "2026-10-26T17:39:32Z"
+    message: Calico is running on this node
+    reason: CalicoIsUp
+    status: "False"
+    type: NetworkUnavailable
+  - lastHeartbeatTime: "2026-10-26T17:52:29Z"
+    lastTransitionTime: "2026-10-26T10:35:35Z"
+    message: kubelet has sufficient memory available
+    reason: KubeletHasSufficientMemory
+    status: "False"
+    type: MemoryPressure
+  - lastHeartbeatTime: "2026-10-26T17:52:29Z"
+    lastTransitionTime: "2026-10-26T10:35:35Z"
+    message: kubelet has no disk pressure
+    reason: KubeletHasNoDiskPressure
+    status: "False"
+    type: DiskPressure
+  - lastHeartbeatTime: "2026-10-26T17:52:29Z"
+    lastTransitionTime: "2026-10-26T10:35:35Z"
+    message: kubelet has sufficient PID available
+    reason: KubeletHasSufficientPID
+    status: "False"
+    type: PIDPressure
+  - lastHeartbeatTime: "2026-10-26T17:52:29Z"
+    lastTransitionTime: "2026-10-26T17:40:06Z"
+    message: kubelet is posting ready status
+    reason: KubeletReady
+    status: "True"
+    type: Ready
+  daemonEndpoints:
+    kubeletEndpoint:
+      Port: 10250
+  features:
+    supplementalGroupsPolicy: true
+  images:
+  - names:
+    - docker.io/calico/node@sha256:92d8bcca3280cd27b9c98cb6e70c3af10ad6ff8accd288919b04ae0cd6021c2e
+    - docker.io/calico/node:v3.30.3
+    sizeBytes: 157078821
+  - names:
+    - docker.io/calico/cni@sha256:b32ac832411b188a8adc9e31b3e23cbbecd6d63c182a3802e947303f97c2f700
+    - docker.io/calico/cni:v3.30.3
+    sizeBytes: 71933934
+  - names:
+    - docker.io/library/nginx@sha256:4c41e2d0a3a55b325ed572cd0200bdb72af1433c3daa2bca6ef8eea68ce504a2
+    - docker.io/library/nginx:latest
+    sizeBytes: 63903938
+  - names:
+    - registry.k8s.io/kube-proxy@sha256:d08adb0c8c2c68075f1e6fa6c4c82880c5af54c1686ac20d22af612082c32a31
+    - registry.k8s.io/kube-proxy:v1.35.9
+    sizeBytes: 27179348
+  - names:
+    - registry.k8s.io/pause@sha256:278fb9dbcca9518083ad1e11276933a2e96f23de604a3a08cc3c80002767d24c
+    - registry.k8s.io/pause:3.10.1
+    sizeBytes: 320448
+  nodeInfo:
+    architecture: amd64
+    bootID: 812adff7-c1f1-499f-bf7c-fdf5110d712e
+    containerRuntimeVersion: containerd://2.2.2
+    kernelVersion: 7.0.0-38-generic
+    kubeProxyVersion: ""
+    kubeletVersion: v1.35.9
+    machineID: 025eb04331ed4f0a8cab4a97bd92643a
+    operatingSystem: linux
+    osImage: Ubuntu 26.04.1 LTS
+    systemUUID: 025eb043-31ed-4f0a-8cab-4a97bd92643a
+  runtimeHandlers:
+  - features:
+      recursiveReadOnlyMounts: true
+      userNamespaces: true
+    name: ""
+  - features:
+      recursiveReadOnlyMounts: true
+      userNamespaces: true
+    name: runc
