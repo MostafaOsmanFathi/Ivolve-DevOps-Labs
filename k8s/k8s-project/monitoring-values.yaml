@@ -1,0 +1,54 @@
+
+prometheusOperator:
+  tolerations:
+    - key: workload
+      operator: Equal
+      value: ivolveApp
+      effect: NoSchedule
+  admissionWebhooks:
+    patch:
+      tolerations:
+        - key: workload
+          operator: Equal
+          value: ivolveApp
+          effect: NoSchedule
+
+prometheus:
+  prometheusSpec:
+    tolerations:
+      - key: workload
+        operator: Equal
+        value: ivolveApp
+        effect: NoSchedule
+
+alertmanager:
+  alertmanagerSpec:
+    tolerations:
+      - key: workload
+        operator: Equal
+        value: ivolveApp
+        effect: NoSchedule
+
+grafana:
+  tolerations:
+    - key: workload
+      operator: Equal
+      value: ivolveApp
+      effect: NoSchedule
+
+kube-state-metrics:
+  tolerations:
+    - key: workload
+      operator: Equal
+      value: ivolveApp
+      effect: NoSchedule
+
+prometheus-node-exporter:
+  tolerations:
+    - key: workload
+      operator: Equal
+      value: ivolveApp
+      effect: NoSchedule
+    - key: node-role.kubernetes.io/control-plane
+      operator: Exists
+      effect: NoSchedule
