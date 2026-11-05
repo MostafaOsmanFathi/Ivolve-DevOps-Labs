@@ -1,49 +1,75 @@
-![alt text](image.png)
+# Lab 22 - Jenkins Shared Library Pipeline
 
-![alt text](image-1.png)
+## Overview
 
-![alt text](image-3.png)
+Use a Jenkins shared library to define reusable pipeline steps for building the app, building/pushing the Docker image, and deploying to Kubernetes, then verify the agent setup and pipeline run.
 
-![alt text](image-2.png)
+## Proof
 
-![alt text](image-4.png)
+### 1. Before pipeline
 
-the new Jenkinsfile 
-[](./Jenkinsfile)
+![Before pipeline](image.png)
 
-the shared lib var files
-[](./vars/)
-[](./vars/buildAndPushImage.groovy)
-[](./vars/buildApp.groovy)
-[](./vars/deployToK8s.groovy)
+*Checking the Jenkins job before running the pipeline.*
 
+![Check Jenkins job](image-1.png)
 
+*Reviewing the Jenkins job before the pipeline runs.*
 
-Agent install 
+![Review pipeline config](image-3.png)
 
-on contoler (master)
-![alt text](image-5.png)
+*Reviewing the pipeline configuration before execution.*
 
+![Review shared library setup](image-2.png)
 
-![alt text](image-6.png)
-![alt text](image-7.png)
+*Reviewing the shared library setup before execution.*
 
+![Review shared library variables](image-4.png)
 
-on slave(agent)
+*Reviewing the shared library variables before execution.*
 
-![alt text](image-8.png)
+### 2. Agent install on controller
 
-![alt text](image-15.png)
-![alt text](image-10.png)
+![Install controller agent](image-5.png)
 
-![alt text](image-11.png)
+*Installing the Jenkins agent on the controller.*
 
+![Verify controller agent](image-6.png)
 
-![alt text](image-12.png)
+*Verifying the controller agent installation.*
 
+![Check controller agent](image-7.png)
 
-testing agent
+*Checking the controller agent status.*
 
-![alt text](image-13.png)
+### 3. Agent install on slave
 
-![alt text](image-14.png)
+![Install slave agent](image-8.png)
+
+*Installing the Jenkins agent on the slave.*
+
+![Verify slave agent](image-15.png)
+
+*Verifying the slave agent installation.*
+
+![Check slave agent](image-10.png)
+
+*Checking the slave agent status.*
+
+![Test agent](image-11.png)
+
+*Testing the slave agent connection.*
+
+![Run pipeline on slave](image-12.png)
+
+*Running the pipeline on the slave agent.*
+
+### 4. Testing agent
+
+![Test agent](image-13.png)
+
+*Testing the agent for pipeline execution.*
+
+![Pipeline result](image-14.png)
+
+*Confirming the pipeline result.*
