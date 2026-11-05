@@ -1,0 +1,38 @@
+@Library('shared-lib') _
+
+pipeline {
+    agent any
+
+    environment {
+        DOCKER_IMAGE = 'mostafaosmanfathi/ivolve-nodejs-app'
+    }
+
+    stages {
+        stage('Build app') {
+            steps {
+                buildApp()
+            }
+        }
+
+        stage('Build and push image') {
+            steps {
+                buildAndPushImage()
+            }
+        }
+
+        stage('Deploy to K8s') {
+            steps {
+                deployToK8s()
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Pipeline completed successfully.'
+        }
+        failure {
+            echo '======== pipeline execution failed ========'
+        }
+    }
+}
