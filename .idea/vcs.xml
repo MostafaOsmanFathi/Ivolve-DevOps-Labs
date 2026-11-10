@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Build-Tools/lab-1/CalculatorMavenApp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Build-Tools/lab-2/CalculatorGradleApp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Docker/lab-1/CalculatorMavenApp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Docker/lab-2/CalculatorMavenApp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Docker/lab-4/ImageOptimization-" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Docker/lab-5/TrivyImage" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Docker/lab-6/PythonApp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Docker/lab-7/MicroserviceApp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Docker/lab-8/iVolveApp" vcs="Git" />
+  </component>
+</project>
